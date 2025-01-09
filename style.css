@@ -1,20 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap");
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-
-:root {
-  --grayish-blue: hsl(237, 18%, 59%);
-  --soft-red: hsl(345, 95%, 68%);
-  --white: hsl(0, 0%, 100%);
-  --dark-desaturated-blue: hsl(236, 21%, 26%);
-  --very-dark-blue: hsl(235, 16%, 14%);
-  --very-dark-black-blue: hsl(234, 17%, 12%);
-}
-
 body {
   font-family: "Red Hat Text", sans-serif;
   font-weight: 700;
@@ -28,6 +18,15 @@ body {
   background-image: url("./images/bg-stars.svg");
   background-color: var(--very-dark-black-blue);
 }
+:root {
+  --grayish-blue: hsl(237, 18%, 59%);
+  --soft-red: hsl(345, 95%, 68%);
+  --white: hsl(0, 0%, 100%);
+  --dark-desaturated-blue: hsl(236, 21%, 26%);
+  --very-dark-blue: hsl(235, 16%, 14%);
+  --very-dark-black-blue: hsl(234, 17%, 12%);
+}
+
 
 h2 {
   position: absolute;
@@ -39,12 +38,7 @@ h2 {
   margin: 0 16px;
 }
 
-.countdown {
-  display: flex;
-  gap: 10px;
-  text-align: center;
-  margin: auto;
-}
+
 
 .flip-card {
   font-size: 2rem;
@@ -65,7 +59,12 @@ h2 {
   transform: rotateX(0deg);
   animation: flip-top 0.5s ease-in forwards;
 }
-
+.countdown {
+  display: flex;
+  gap: 10px;
+  text-align: center;
+  margin: auto;
+}
 .bottom-flip {
   bottom: 0;
   animation: flip-bottom 0.5s ease-out 0.5s;
@@ -104,12 +103,7 @@ h2 {
   box-shadow: 0 2px rgb(71, 83, 115, 0.2) inset;
 }
 
-p {
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  color: var(--grayish-blue);
-  margin-top: 40px;
-}
+
 
 .title {
   margin-top: 1.2rem;
@@ -124,7 +118,12 @@ p {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
-
+p {
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--grayish-blue);
+  margin-top: 40px;
+}
 @keyframes flip-top {
   to {
     transform: rotateX(90deg);
@@ -133,38 +132,38 @@ p {
 
 @keyframes flip-bottom {
   to {
-    transform: rotateX(0deg);
+  transform: rotateX(0deg);
   }
 }
 
 @media (min-width: 376px) {
-  .flip-card {
-    font-size: 5rem;
-  }
+.flip-card {
+  font-size: 5rem;
+}
 
-  .countdown {
-    gap: 35px;
-  }
+.countdown {
+  gap: 35px;
+}
 
-  .top,
-  .bottom,
-  .top-flip,
-  .bottom-flip {
-    height: 80px;
-    width: 150px;
-    padding: 27px 16px;
-  }
+.top,
+.bottom,
+.top-flip,
+.bottom-flip {
+  height: 80px;
+  width: 150px;
+  padding: 27px 16px;
+}
 
-  .footer > img {
-    width: 100%;
-  }
+.footer > img {
+  width: 100%;
+}
 
-  .media > span {
-    margin-right: 25px;
-  }
+.media > span {
+  margin-right: 25px;
+}
 
-  .attribution {
-    font-size: 1rem;
-    bottom: 1vw;
-  }
+.attribution {
+  font-size: 1rem;
+  bottom: 1vw;
+}
 }
